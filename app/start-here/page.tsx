@@ -18,7 +18,7 @@ const FACTS = [
   },
   {
     q: 'Who wrote it?',
-    a: 'A woman with endo, using suggestions from real people with endometriosis.',
+    a: 'This guide was made by Lucy, or @lucyyyait on TikTok and Instagram, a woman with endometriosis who has had two surgeries and experienced symptoms for 10 years.',
   },
   {
     q: 'Do I have to do all of it?',

@@ -18,7 +18,7 @@ export default function AdvicePage() {
       <PageHeader
         eyebrow="Misc / FAQs / general advice"
         title="ADVICE"
-        intro="If you only read one page, read this one. It’s three things."
+        intro="General advice for people supporting friends, family, or a partner with endometriosis."
       />
 
       <div className="mt-8 space-y-3">
@@ -28,10 +28,7 @@ export default function AdvicePage() {
       </div>
 
       <div className="mt-12 space-y-12">
-        <SuggestBanner
-          heading="Anything missing?"
-          body="This page is deliberately short. If something belongs on it, tell us."
-        />
+        <SuggestBanner heading="Anything missing?" />
         <PageNav current="/advice" />
       </div>
     </div>

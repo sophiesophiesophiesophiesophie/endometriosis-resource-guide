@@ -17,7 +17,7 @@ export default function ResourcesPage() {
       <PageHeader
         eyebrow="Research: where to start"
         title="RESEARCH"
-        intro="Doing your own reading takes the burden off them. One link per category — no homework pile."
+        intro="Researching endometriosis yourself takes the burden off of your loved one. Here are a few places to start."
       />
 
       <div className="mt-8 grid gap-4 sm:grid-cols-2">

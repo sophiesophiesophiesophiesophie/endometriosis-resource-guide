@@ -15,7 +15,7 @@ export default function SuggestPage() {
       <PageHeader
         eyebrow="Comments & suggestions"
         title="SUGGEST"
-        intro="Write one sentence or five paragraphs — whatever you’ve got. Everything else on this form is optional."
+        intro="Drop anything you've found helpful, either as someone with endometriosis or someone who has helped others with it. The more community contributions we get, the better this resource becomes from the varied perspectives!"
       />
 
       <div className="mt-8">
