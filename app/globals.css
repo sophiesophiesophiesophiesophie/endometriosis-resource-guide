@@ -39,32 +39,32 @@
 
 :root {
   color-scheme: light;
-  /* ENDO brand palette — 5 colours total */
-  --endo-red: #E8251A;
+  /* ENDO brand palette — blush pink + deep burgundy, 5 colours total */
+  --endo-red: #6E1E30;         /* deep wine / burgundy */
 
-  --background: #F2F0EC;      /* warm off-white */
-  --foreground: #1A1A1A;      /* near-black */
-  --card: #E8E5DF;            /* slightly darker off-white */
-  --card-foreground: #1A1A1A;
-  --primary: #E8251A;         /* endo red */
-  --primary-foreground: #F2F0EC;
-  --muted: #D6D3CC;
-  --muted-foreground: #6B6560;
-  --accent: #E8251A;
-  --accent-foreground: #F2F0EC;
-  --border: #C8C4BC;
-  --input: #C8C4BC;
-  --ring: #E8251A;
-  --radius: 0rem;             /* zero radius — editorial/flat */
+  --background: #F7E1DE;      /* soft blush pink */
+  --foreground: #2B1016;      /* near-black warm burgundy */
+  --card: #F1CFC9;            /* dustier pink card surface */
+  --card-foreground: #2B1016;
+  --primary: #6E1E30;         /* deep wine / burgundy */
+  --primary-foreground: #F7E9DE;
+  --muted: #EBD3CD;
+  --muted-foreground: #8C5A58;
+  --accent: #6E1E30;
+  --accent-foreground: #F7E9DE;
+  --border: #E3C2BC;
+  --input: #E3C2BC;
+  --ring: #6E1E30;
+  --radius: 0.75rem;          /* soft rounded corners */
 
-  --sidebar: #E8E5DF;
-  --sidebar-foreground: #1A1A1A;
-  --sidebar-primary: #E8251A;
-  --sidebar-primary-foreground: #F2F0EC;
-  --sidebar-accent: #D6D3CC;
-  --sidebar-accent-foreground: #1A1A1A;
-  --sidebar-border: #C8C4BC;
-  --sidebar-ring: #E8251A;
+  --sidebar: #F1CFC9;
+  --sidebar-foreground: #2B1016;
+  --sidebar-primary: #6E1E30;
+  --sidebar-primary-foreground: #F7E9DE;
+  --sidebar-accent: #EBD3CD;
+  --sidebar-accent-foreground: #2B1016;
+  --sidebar-border: #E3C2BC;
+  --sidebar-ring: #6E1E30;
 }
 
 @layer base {

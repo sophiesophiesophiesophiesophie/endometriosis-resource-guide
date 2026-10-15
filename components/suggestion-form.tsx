@@ -9,7 +9,7 @@ type Status = 'idle' | 'sending' | 'sent' | 'error'
 const TOPICS = ['Anything / not sure', ...NAV_ITEMS.map((item) => item.label)]
 
 const fieldClass =
-  'w-full border border-border bg-background px-4 py-3 text-sm text-foreground placeholder:text-muted-foreground focus:border-[var(--endo-red)] focus:outline-none'
+  'w-full rounded-xl border border-border bg-background px-4 py-3 text-sm text-foreground placeholder:text-muted-foreground focus:border-[var(--endo-red)] focus:outline-none'
 
 const labelClass =
   'mb-2 block font-mono text-[10px] uppercase tracking-[0.25em] text-muted-foreground'
@@ -61,7 +61,7 @@ export function SuggestionForm() {
 
   if (status === 'sent') {
     return (
-      <div className="border border-[var(--endo-red)] bg-card p-8 text-center">
+      <div className="rounded-2xl border border-[var(--endo-red)] bg-card p-8 text-center">
         <p aria-hidden="true" className="text-3xl">
           💌
         </p>
@@ -74,7 +74,7 @@ export function SuggestionForm() {
         <button
           type="button"
           onClick={() => setStatus('idle')}
-          className="mt-6 border border-border bg-background px-5 py-3 font-mono text-[11px] uppercase tracking-[0.2em] text-foreground transition-colors hover:border-[var(--endo-red)] hover:text-[var(--endo-red)]"
+          className="mt-6 rounded-full border border-border bg-background px-5 py-3 font-mono text-[11px] uppercase tracking-[0.2em] text-foreground transition-colors hover:border-[var(--endo-red)] hover:text-[var(--endo-red)]"
         >
           Send another
         </button>
@@ -83,7 +83,7 @@ export function SuggestionForm() {
   }
 
   return (
-    <form onSubmit={onSubmit} className="border border-border bg-card p-6 md:p-8">
+    <form onSubmit={onSubmit} className="rounded-2xl border border-border bg-card p-6 md:p-8">
       <div>
         <label htmlFor="message" className={labelClass}>
           Your suggestion <span className="text-[var(--endo-red)]">*</span>
@@ -174,7 +174,7 @@ export function SuggestionForm() {
       <button
         type="submit"
         disabled={status === 'sending' || message.trim().length < 2}
-        className="mt-8 w-full bg-[var(--endo-red)] px-6 py-5 font-mono text-xs uppercase tracking-[0.25em] text-[var(--primary-foreground)] transition-opacity hover:opacity-85 disabled:cursor-not-allowed disabled:opacity-40"
+        className="mt-8 w-full rounded-full bg-[var(--endo-red)] px-6 py-5 font-mono text-xs uppercase tracking-[0.25em] text-[var(--primary-foreground)] transition-opacity hover:opacity-85 disabled:cursor-not-allowed disabled:opacity-40"
       >
         {status === 'sending' ? 'Sending…' : 'Send it →'}
       </button>
@@ -182,13 +182,13 @@ export function SuggestionForm() {
       {status === 'error' && (
         <div
           role="alert"
-          className="mt-6 border border-[var(--endo-red)] border-l-4 bg-background p-4"
+          className="mt-6 rounded-xl border border-[var(--endo-red)] border-l-4 bg-background p-4"
         >
           <p className="text-[13px] leading-relaxed text-foreground">{error}</p>
           {mailto && (
             <a
               href={mailto}
-              className="mt-3 inline-flex border border-border px-4 py-2.5 font-mono text-[10px] uppercase tracking-[0.15em] text-foreground transition-colors hover:border-[var(--endo-red)] hover:text-[var(--endo-red)]"
+              className="mt-3 inline-flex rounded-full border border-border px-4 py-2.5 font-mono text-[10px] uppercase tracking-[0.15em] text-foreground transition-colors hover:border-[var(--endo-red)] hover:text-[var(--endo-red)]"
             >
               Send it from your email app instead ↗
             </a>

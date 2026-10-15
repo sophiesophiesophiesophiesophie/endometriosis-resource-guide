@@ -22,7 +22,7 @@ export default function ResourcesPage() {
 
       <div className="mt-8 grid gap-4 sm:grid-cols-2">
         {RESOURCE_GROUPS.map((group) => (
-          <section key={group.label} className="flex flex-col border border-border bg-card p-6">
+          <section key={group.label} className="flex flex-col rounded-2xl border border-border bg-card p-6">
             <h2 className="mb-5 flex items-center gap-2 border-b border-border pb-4 font-display text-base uppercase tracking-wide text-foreground">
               <span aria-hidden="true">{group.emoji}</span> {group.label}
             </h2>

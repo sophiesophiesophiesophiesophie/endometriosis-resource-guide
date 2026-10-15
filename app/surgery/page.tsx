@@ -47,7 +47,7 @@ export default function SurgeryPage() {
         ))}
       </div>
 
-      <section className="mt-10 border border-border bg-card p-6">
+      <section className="mt-10 rounded-2xl border border-border bg-card p-6">
         <h2 className="font-display text-xl uppercase leading-none text-foreground">
           🔎 Surgery research: where to start
         </h2>
@@ -56,7 +56,7 @@ export default function SurgeryPage() {
         </p>
         <Link
           href="/resources"
-          className="mt-4 inline-flex border border-border bg-background px-4 py-2.5 font-mono text-[10px] uppercase tracking-[0.15em] text-foreground transition-colors hover:border-[var(--endo-red)] hover:text-[var(--endo-red)]"
+          className="mt-4 inline-flex rounded-full border border-border bg-background px-4 py-2.5 font-mono text-[10px] uppercase tracking-[0.15em] text-foreground transition-colors hover:border-[var(--endo-red)] hover:text-[var(--endo-red)]"
         >
           Go to research →
         </Link>

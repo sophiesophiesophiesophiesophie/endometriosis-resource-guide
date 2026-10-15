@@ -14,7 +14,7 @@ export const metadata: Metadata = {
 
 function Empty({ children }: { children: React.ReactNode }) {
   return (
-    <p className="border border-border bg-card px-4 py-6 text-center text-[13px] text-muted-foreground">
+    <p className="rounded-xl border border-border bg-card px-4 py-6 text-center text-[13px] text-muted-foreground">
       {children}
     </p>
   )
@@ -109,7 +109,7 @@ export default async function ReviewPage() {
       </div>
 
       {error && (
-        <p role="alert" className="mt-6 border border-[var(--endo-red)] border-l-4 bg-card p-4 text-sm">
+        <p role="alert" className="mt-6 rounded-xl border border-[var(--endo-red)] border-l-4 bg-card p-4 text-sm">
           {error}
         </p>
       )}

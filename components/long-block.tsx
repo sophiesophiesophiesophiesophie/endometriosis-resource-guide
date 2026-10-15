@@ -6,7 +6,7 @@ import type { LongBlock as LongBlockData } from '@/lib/content'
  */
 export function LongBlock({ block }: { block: LongBlockData }) {
   return (
-    <details className="group border border-border bg-card transition-colors open:border-[var(--endo-red)]">
+    <details className="group rounded-xl border border-border bg-card transition-colors open:border-[var(--endo-red)]">
       <summary className="flex cursor-pointer list-none items-center justify-between gap-4 p-4 [&::-webkit-details-marker]:hidden">
         <span className="font-mono text-[11px] uppercase tracking-[0.2em] text-foreground">
           {block.title}

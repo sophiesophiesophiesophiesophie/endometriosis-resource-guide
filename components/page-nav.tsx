@@ -13,7 +13,7 @@ export function PageNav({ current }: { current: string }) {
       {previous ? (
         <Link
           href={previous.href}
-          className="group border border-border bg-card p-4 transition-colors hover:border-[var(--endo-red)]"
+          className="group rounded-xl border border-border bg-card p-4 transition-colors hover:border-[var(--endo-red)]"
         >
           <span className="font-mono text-[10px] uppercase tracking-[0.2em] text-muted-foreground">
             ← Previous
@@ -29,7 +29,7 @@ export function PageNav({ current }: { current: string }) {
       {next && (
         <Link
           href={next.href}
-          className="group border border-border bg-card p-4 text-right transition-colors hover:border-[var(--endo-red)] sm:col-start-2"
+          className="group rounded-xl border border-border bg-card p-4 text-right transition-colors hover:border-[var(--endo-red)] sm:col-start-2"
         >
           <span className="font-mono text-[10px] uppercase tracking-[0.2em] text-muted-foreground">
             Next →

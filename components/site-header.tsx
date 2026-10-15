@@ -46,7 +46,7 @@ export function SiteHeader() {
           <div className="flex items-center gap-2">
             <Link
               href="/suggest"
-              className="shrink-0 bg-[var(--endo-red)] px-4 py-2 font-mono text-[11px] uppercase tracking-[0.15em] text-[var(--primary-foreground)] transition-opacity hover:opacity-85"
+              className="shrink-0 rounded-full bg-[var(--endo-red)] px-4 py-2 font-mono text-[11px] uppercase tracking-[0.15em] text-[var(--primary-foreground)] transition-opacity hover:opacity-85"
               onClick={() => setOpen(false)}
             >
               + Suggest
@@ -57,7 +57,7 @@ export function SiteHeader() {
               onClick={() => setOpen((v) => !v)}
               aria-expanded={open}
               aria-controls="mobile-nav"
-              className="flex items-center gap-2 border border-border px-3 py-2 font-mono text-[11px] uppercase tracking-[0.15em] text-foreground lg:hidden"
+              className="flex items-center gap-2 rounded-lg border border-border px-3 py-2 font-mono text-[11px] uppercase tracking-[0.15em] text-foreground lg:hidden"
             >
               {open ? 'Close' : 'Menu'}
             </button>

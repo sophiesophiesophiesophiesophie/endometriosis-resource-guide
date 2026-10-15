@@ -49,7 +49,7 @@ export function FilterList<T extends Tip>({
         type="button"
         onClick={() => setActive(value)}
         aria-pressed={isActive}
-        className={`flex items-center gap-2 border px-4 py-2.5 font-mono text-[11px] uppercase tracking-[0.15em] transition-colors ${
+        className={`flex items-center gap-2 rounded-full border px-4 py-2.5 font-mono text-[11px] uppercase tracking-[0.15em] transition-colors ${
           isActive
             ? 'border-[var(--endo-red)] bg-[var(--endo-red)] text-[var(--primary-foreground)]'
             : 'border-border bg-card text-foreground hover:border-[var(--endo-red)] hover:text-[var(--endo-red)]'
