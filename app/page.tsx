@@ -1,3 +1,4 @@
+import Image from 'next/image'
 import Link from 'next/link'
 
 import { SectionCard } from '@/components/section-card'
@@ -26,37 +27,59 @@ export default function Home() {
             </span>
           </div>
 
-          <span
-            className="block font-display text-[clamp(2.5rem,8vw,6rem)] uppercase leading-none tracking-tight"
-            style={{ color: 'var(--endo-red)' }}
-            aria-hidden="true"
-          >
-            endometriosis guide
-          </span>
+          <div className="grid gap-10 md:grid-cols-[1.1fr_0.9fr] md:items-center">
+            <div>
+              <span
+                className="block font-display text-[clamp(2.2rem,7vw,5rem)] uppercase leading-none tracking-tight"
+                style={{ color: 'var(--endo-red)' }}
+                aria-hidden="true"
+              >
+                endometriosis
+              </span>
+              <span
+                className="-mt-1 block font-script text-[clamp(2.5rem,8vw,6rem)] leading-none"
+                style={{ color: 'var(--endo-red)' }}
+                aria-hidden="true"
+              >
+                guide
+              </span>
 
-          <h1 className="mt-6 max-w-2xl text-pretty font-sans text-xl font-semibold leading-snug text-foreground md:text-2xl">
-            How to ACTUALLY help people with endometriosis
-          </h1>
+              <h1 className="mt-6 max-w-2xl text-pretty font-sans text-xl font-semibold leading-snug text-foreground md:text-2xl">
+                How to ACTUALLY help people with endometriosis
+              </h1>
 
-          <p className="mt-4 max-w-xl text-sm leading-relaxed text-muted-foreground">
-            This is a crowdsourced guide with advice from hundreds of people with endometriosis.
-            Everything is sorted by cost and effort, so you can filter by what fits your
-            circumstances best.
-          </p>
+              <p className="mt-4 max-w-xl text-sm leading-relaxed text-muted-foreground">
+                This is a crowdsourced guide with advice from hundreds of people with
+                endometriosis. Everything is sorted by cost and effort, so you can filter by what
+                fits your circumstances best.
+              </p>
 
-          <div className="mt-8 flex flex-col gap-3 sm:flex-row">
-            <Link
-              href="/start-here"
-              className="rounded-full bg-[var(--endo-red)] px-6 py-4 text-center font-mono text-[11px] uppercase tracking-[0.2em] text-[var(--primary-foreground)] transition-opacity hover:opacity-85"
-            >
-              Start here →
-            </Link>
-            <Link
-              href="/free-support"
-              className="rounded-full border border-border bg-card px-6 py-4 text-center font-mono text-[11px] uppercase tracking-[0.2em] text-foreground transition-colors hover:border-[var(--endo-red)] hover:text-[var(--endo-red)]"
-            >
-              Free ways to help
-            </Link>
+              <div className="mt-8 flex flex-col gap-3 sm:flex-row">
+                <Link
+                  href="/start-here"
+                  className="rounded-full bg-[var(--endo-red)] px-6 py-4 text-center font-mono text-[11px] uppercase tracking-[0.2em] text-[var(--primary-foreground)] transition-opacity hover:opacity-85"
+                >
+                  Start here →
+                </Link>
+                <Link
+                  href="/free-support"
+                  className="rounded-full border border-border bg-card px-6 py-4 text-center font-mono text-[11px] uppercase tracking-[0.2em] text-foreground transition-colors hover:border-[var(--endo-red)] hover:text-[var(--endo-red)]"
+                >
+                  Free ways to help
+                </Link>
+              </div>
+            </div>
+
+            <div className="relative aspect-[4/5] overflow-hidden rounded-3xl border border-border bg-card">
+              <Image
+                src="/images/hero-sunburst.jpg"
+                alt="Silhouette of a woman standing at the shoreline at sunset, arms raised"
+                fill
+                priority
+                sizes="(min-width: 768px) 40vw, 90vw"
+                className="object-cover"
+              />
+            </div>
           </div>
         </div>
       </header>
@@ -75,6 +98,33 @@ export default function Home() {
           {SECTION_CARDS.map((card) => (
             <SectionCard key={card.href} card={card} />
           ))}
+        </div>
+
+        <div className="mt-12 grid gap-8 md:grid-cols-2 md:items-center">
+          <div className="relative aspect-[4/3] overflow-hidden rounded-3xl border border-border bg-card md:order-2">
+            <Image
+              src="/images/butterfly-pattern.jpg"
+              alt="Close-up watercolor pattern of pink and burgundy butterfly wings"
+              fill
+              sizes="(min-width: 768px) 40vw, 90vw"
+              className="object-cover"
+            />
+          </div>
+          <div className="md:order-1">
+            <h2 className="font-display text-2xl uppercase leading-none tracking-wide text-foreground">
+              Written by someone who gets it
+            </h2>
+            <p className="mt-4 max-w-md text-[13px] leading-relaxed text-muted-foreground">
+              This guide comes from Lucy, who has had two surgeries and ten years of symptoms —
+              plus hundreds of people who added what actually helped them too.
+            </p>
+            <Link
+              href="/start-here"
+              className="mt-6 inline-flex items-center gap-2 rounded-full border border-border bg-background px-5 py-3 font-mono text-[11px] uppercase tracking-[0.2em] text-foreground transition-colors hover:border-[var(--endo-red)] hover:text-[var(--endo-red)]"
+            >
+              Meet the person behind it →
+            </Link>
+          </div>
         </div>
 
         <div className="mt-12">

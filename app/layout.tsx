@@ -1,6 +1,6 @@
 import { Analytics } from '@vercel/analytics/next'
 import type { Metadata, Viewport } from 'next'
-import { Anton, Inter, IBM_Plex_Mono } from 'next/font/google'
+import { Anton, Caveat, Inter, IBM_Plex_Mono } from 'next/font/google'
 
 import { SiteFooter } from '@/components/site-footer'
 import { SiteHeader } from '@/components/site-header'
@@ -9,6 +9,11 @@ import './globals.css'
 const _anton = Anton({
   subsets: ['latin'],
   weight: '400',
+})
+
+const _caveat = Caveat({
+  subsets: ['latin'],
+  weight: ['500', '600'],
 })
 
 const _inter = Inter({
@@ -32,7 +37,7 @@ export const metadata: Metadata = {
 
 export const viewport: Viewport = {
   colorScheme: 'light',
-  themeColor: '#F2F0EC',
+  themeColor: '#F7E1DE',
 }
 
 export default function RootLayout({

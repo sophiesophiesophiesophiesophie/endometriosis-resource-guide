@@ -7,6 +7,7 @@
 @theme inline {
   --font-sans: 'Inter', 'Inter Fallback';
   --font-display: 'Anton', 'Anton Fallback';
+  --font-script: 'Caveat', 'Caveat Fallback';
   --font-mono: 'IBM Plex Mono', 'IBM Plex Mono Fallback';
 
   --color-background: var(--background);
