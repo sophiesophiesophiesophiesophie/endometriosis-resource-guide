@@ -139,7 +139,7 @@ const FREE_SEED: FreeTip[] = [
     title: 'Eat anti-inflammatory or gluten-free when you’re together',
     effort: 'Low',
     detail:
-      'Especially for roommates and partners. Even if it’s only sometimes — accommodate their dietary needs and let them know they’re not a burden.',
+      'Always check in with them first before assuming dietary needs or preferences. It can help them know they’re not a burden.',
   },
   {
     title: 'Be present during a flare-up',
@@ -155,7 +155,7 @@ const FREE_SEED: FreeTip[] = [
     title: 'Research endometriosis in your own time',
     effort: 'Medium',
     detail:
-      'Constantly explaining the condition can get exhausting. Take the burden off them by researching yourself — podcasts, news, studies, endo creators online.',
+      'Constantly explaining the condition can get exhausting. Check out the Research page for advice on where to start.',
   },
   {
     title: 'Drive them to appointments, the ER, and surgery',
@@ -171,7 +171,7 @@ const FREE_SEED: FreeTip[] = [
     title: 'Offer to attend appointments with them',
     effort: 'Medium',
     detail:
-      'It can be exhausting to constantly advocate for yourself — many people find it easier when they have a loved one by their side.',
+      'It can be exhausting to constantly advocate for yourself. Many people find it easier when they have a loved one by their side.',
   },
   {
     title: 'Stay by their side post-op',
@@ -297,8 +297,6 @@ const SURGERY_BEFORE_SEED: Tip[] = [
   },
   {
     title: 'Learn what kind of surgery they’re having',
-    detail:
-      'Excision, ablation, and so on. Don’t make them explain everything to you — it’s exhausting.',
   },
   {
     title: 'Offer to meal prep or cook for them during recovery',

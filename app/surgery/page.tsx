@@ -65,7 +65,7 @@ export default function SurgeryPage() {
       <div className="mt-12 space-y-12">
         <SuggestBanner
           heading="Been through surgery?"
-          body="Tell us what you wish people had done for you before or after. It’s the section people most often arrive here looking for."
+          body="Tell us what you wish people had done for you before or after."
         />
         <PageNav current="/surgery" />
       </div>
