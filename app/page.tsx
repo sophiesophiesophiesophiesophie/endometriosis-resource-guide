@@ -27,11 +27,11 @@ export default function Home() {
           </div>
 
           <span
-            className="block font-display text-[clamp(6rem,22vw,18rem)] uppercase leading-none tracking-tight"
+            className="block font-display text-[clamp(2.5rem,8vw,6rem)] uppercase leading-none tracking-tight"
             style={{ color: 'var(--endo-red)' }}
             aria-hidden="true"
           >
-            ENDO
+            endometriosis guide
           </span>
 
           <h1 className="mt-6 max-w-2xl text-pretty font-sans text-xl font-semibold leading-snug text-foreground md:text-2xl">
