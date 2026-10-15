@@ -20,7 +20,7 @@ export function SiteFooter() {
             </p>
             <Link
               href="/suggest"
-              className="mt-4 inline-flex border border-border px-4 py-2.5 font-mono text-[10px] uppercase tracking-[0.15em] text-foreground transition-colors hover:border-[var(--endo-red)] hover:text-[var(--endo-red)]"
+              className="mt-4 inline-flex rounded-full border border-border px-4 py-2.5 font-mono text-[10px] uppercase tracking-[0.15em] text-foreground transition-colors hover:border-[var(--endo-red)] hover:text-[var(--endo-red)]"
             >
               Leave a suggestion →
             </Link>

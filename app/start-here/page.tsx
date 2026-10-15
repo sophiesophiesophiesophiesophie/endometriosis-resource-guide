@@ -43,7 +43,7 @@ export default function StartHerePage() {
         {FACTS.map((fact) => (
           <details
             key={fact.q}
-            className="group border border-border bg-card transition-colors open:border-[var(--endo-red)]"
+            className="group rounded-xl border border-border bg-card transition-colors open:border-[var(--endo-red)]"
           >
             <summary className="flex cursor-pointer list-none items-center justify-between gap-4 p-4 [&::-webkit-details-marker]:hidden">
               <span className="text-sm font-semibold leading-relaxed text-foreground">
@@ -63,7 +63,7 @@ export default function StartHerePage() {
         ))}
       </div>
 
-      <section className="mt-12 border border-border border-l-4 border-l-[var(--endo-red)] bg-card p-6">
+      <section className="mt-12 rounded-2xl border border-border border-l-4 border-l-[var(--endo-red)] bg-card p-6">
         <h2 className="font-display text-2xl uppercase leading-none text-foreground">
           What is endometriosis?
         </h2>
@@ -77,7 +77,7 @@ export default function StartHerePage() {
           href="https://www.nhs.uk/conditions/endometriosis/"
           target="_blank"
           rel="noopener noreferrer"
-          className="mt-4 inline-flex border border-border bg-background px-4 py-2.5 font-mono text-[10px] uppercase tracking-[0.15em] text-foreground transition-colors hover:border-[var(--endo-red)] hover:text-[var(--endo-red)]"
+          className="mt-4 inline-flex rounded-full border border-border bg-background px-4 py-2.5 font-mono text-[10px] uppercase tracking-[0.15em] text-foreground transition-colors hover:border-[var(--endo-red)] hover:text-[var(--endo-red)]"
         >
           Read the NHS definition ↗
         </a>
@@ -92,7 +92,7 @@ export default function StartHerePage() {
             <Link
               key={card.href}
               href={card.href}
-              className="group flex items-center justify-between gap-4 border border-border bg-card p-4 transition-colors hover:border-[var(--endo-red)]"
+              className="group flex items-center justify-between gap-4 rounded-xl border border-border bg-card p-4 transition-colors hover:border-[var(--endo-red)]"
             >
               <span className="flex items-center gap-3">
                 <span aria-hidden="true" className="text-lg">

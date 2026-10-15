@@ -8,7 +8,7 @@ export function SuggestBanner({
   body?: string
 }) {
   return (
-    <section className="border border-border bg-card p-6 md:p-8">
+    <section className="rounded-2xl border border-border bg-card p-6 md:p-8">
       <div className="flex flex-col gap-6 md:flex-row md:items-center md:justify-between">
         <div className="max-w-xl">
           <h2 className="font-display text-2xl uppercase leading-none tracking-wide text-foreground">
@@ -19,7 +19,7 @@ export function SuggestBanner({
 
         <Link
           href="/suggest"
-          className="shrink-0 bg-[var(--endo-red)] px-6 py-4 text-center font-mono text-[11px] uppercase tracking-[0.2em] text-[var(--primary-foreground)] transition-opacity hover:opacity-85"
+          className="shrink-0 rounded-full bg-[var(--endo-red)] px-6 py-4 text-center font-mono text-[11px] uppercase tracking-[0.2em] text-[var(--primary-foreground)] transition-opacity hover:opacity-85"
         >
           Leave a suggestion →
         </Link>

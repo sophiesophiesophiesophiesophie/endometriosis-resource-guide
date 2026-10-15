@@ -21,7 +21,7 @@ export default function SpendMoneyPage() {
         intro="Pick a budget. Tap a card to see what it’s for."
       />
 
-      <div className="mt-6 border border-border border-l-4 border-l-[var(--endo-red)] bg-card p-4">
+      <div className="mt-6 rounded-xl border border-border border-l-4 border-l-[var(--endo-red)] bg-card p-4">
         <p className="text-[13px] leading-relaxed text-muted-foreground">
           Always check with people before buying them something — they may not want or need it,
           or already have it. Nothing here works for everyone.

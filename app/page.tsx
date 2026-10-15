@@ -47,13 +47,13 @@ export default function Home() {
           <div className="mt-8 flex flex-col gap-3 sm:flex-row">
             <Link
               href="/start-here"
-              className="bg-[var(--endo-red)] px-6 py-4 text-center font-mono text-[11px] uppercase tracking-[0.2em] text-[var(--primary-foreground)] transition-opacity hover:opacity-85"
+              className="rounded-full bg-[var(--endo-red)] px-6 py-4 text-center font-mono text-[11px] uppercase tracking-[0.2em] text-[var(--primary-foreground)] transition-opacity hover:opacity-85"
             >
               Start here →
             </Link>
             <Link
               href="/free-support"
-              className="border border-border bg-card px-6 py-4 text-center font-mono text-[11px] uppercase tracking-[0.2em] text-foreground transition-colors hover:border-[var(--endo-red)] hover:text-[var(--endo-red)]"
+              className="rounded-full border border-border bg-card px-6 py-4 text-center font-mono text-[11px] uppercase tracking-[0.2em] text-foreground transition-colors hover:border-[var(--endo-red)] hover:text-[var(--endo-red)]"
             >
               Free ways to help
             </Link>

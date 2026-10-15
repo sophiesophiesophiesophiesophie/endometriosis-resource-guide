@@ -12,7 +12,7 @@ function ExternalLink({ href, label }: { href: string; label?: string }) {
       href={href}
       target="_blank"
       rel="noopener noreferrer"
-      className="mt-3 inline-flex items-center gap-2 border border-border bg-background px-3 py-2 font-mono text-[10px] uppercase tracking-[0.15em] text-foreground transition-colors hover:border-[var(--endo-red)] hover:text-[var(--endo-red)]"
+      className="mt-3 inline-flex items-center gap-2 rounded-full border border-border bg-background px-3 py-2 font-mono text-[10px] uppercase tracking-[0.15em] text-foreground transition-colors hover:border-[var(--endo-red)] hover:text-[var(--endo-red)]"
     >
       {label ?? 'Open link'} <span aria-hidden="true">↗</span>
     </a>
@@ -38,7 +38,7 @@ export function TipCard({ tip, index, badge }: TipCardProps) {
       <span className="flex-1 text-sm leading-relaxed text-foreground">
         {tip.title}
         {badge && (
-          <span className="ml-2 whitespace-nowrap border border-border px-1.5 py-0.5 align-middle font-mono text-[9px] uppercase tracking-[0.15em] text-muted-foreground">
+          <span className="ml-2 whitespace-nowrap rounded-full border border-border px-1.5 py-0.5 align-middle font-mono text-[9px] uppercase tracking-[0.15em] text-muted-foreground">
             {badge}
           </span>
         )}
@@ -50,14 +50,14 @@ export function TipCard({ tip, index, badge }: TipCardProps) {
 
   if (!hasMore) {
     return (
-      <div className="flex items-start gap-4 border border-border bg-card p-4">
+      <div className="flex items-start gap-4 rounded-xl border border-border bg-card p-4">
         {heading}
       </div>
     )
   }
 
   return (
-    <details className="group border border-border bg-card transition-colors open:border-[var(--endo-red)]">
+    <details className="group rounded-xl border border-border bg-card transition-colors open:border-[var(--endo-red)]">
       <summary className="flex cursor-pointer list-none items-start gap-4 p-4 [&::-webkit-details-marker]:hidden">
         {heading}
         <span

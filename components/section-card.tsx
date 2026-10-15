@@ -6,7 +6,7 @@ export function SectionCard({ card }: { card: SectionCardMeta }) {
   return (
     <Link
       href={card.href}
-      className="group flex flex-col justify-between border border-border bg-card p-6 transition-colors hover:border-[var(--endo-red)] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--endo-red)]"
+      className="group flex flex-col justify-between rounded-2xl border border-border bg-card p-6 transition-colors hover:border-[var(--endo-red)] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--endo-red)]"
     >
       <div>
         <span aria-hidden="true" className="block text-2xl leading-none">

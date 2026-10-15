@@ -7,7 +7,7 @@ import { PUBLISH_TARGETS, TAG_OPTIONS, findTarget } from '@/lib/sections'
 import { publishAction, rejectAction, reopenAction, type ActionResult } from './actions'
 
 const fieldClass =
-  'w-full border border-border bg-background px-3 py-2.5 text-sm text-foreground placeholder:text-muted-foreground focus:border-[var(--endo-red)] focus:outline-none'
+  'w-full rounded-xl border border-border bg-background px-3 py-2.5 text-sm text-foreground placeholder:text-muted-foreground focus:border-[var(--endo-red)] focus:outline-none'
 
 const labelClass =
   'mb-1.5 block font-mono text-[10px] uppercase tracking-[0.2em] text-muted-foreground'
@@ -42,7 +42,7 @@ function Result({ result }: { result: ActionResult | null }) {
   return (
     <p
       role="status"
-      className={`mt-3 border-l-4 bg-background px-3 py-2 text-[13px] ${
+      className={`mt-3 rounded-lg border-l-4 bg-background px-3 py-2 text-[13px] ${
         result.ok ? 'border-l-[var(--endo-red)] text-foreground' : 'border-l-border text-foreground'
       }`}
     >
@@ -63,7 +63,7 @@ function StatusBadge({ status }: { status: Submission['status'] }) {
 
   return (
     <span
-      className={`border px-2 py-1 font-mono text-[9px] uppercase tracking-[0.2em] ${styles}`}
+      className={`rounded-full border px-2 py-1 font-mono text-[9px] uppercase tracking-[0.2em] ${styles}`}
     >
       {label}
     </span>
@@ -86,7 +86,7 @@ export function SubmissionCard({ submission }: { submission: Submission }) {
   })
 
   return (
-    <article className="border border-border bg-card">
+    <article className="rounded-2xl border border-border bg-card">
       <header className="flex flex-wrap items-center justify-between gap-3 border-b border-border px-4 py-3">
         <div className="flex items-center gap-3">
           <StatusBadge status={submission.status} />
@@ -226,7 +226,7 @@ export function SubmissionCard({ submission }: { submission: Submission }) {
               <button
                 type="submit"
                 disabled={publishing}
-                className="bg-[var(--endo-red)] px-5 py-3 font-mono text-[11px] uppercase tracking-[0.2em] text-[var(--primary-foreground)] transition-opacity hover:opacity-85 disabled:opacity-40"
+                className="rounded-full bg-[var(--endo-red)] px-5 py-3 font-mono text-[11px] uppercase tracking-[0.2em] text-[var(--primary-foreground)] transition-opacity hover:opacity-85 disabled:opacity-40"
               >
                 {publishing ? 'Publishing…' : 'Publish it →'}
               </button>
@@ -240,7 +240,7 @@ export function SubmissionCard({ submission }: { submission: Submission }) {
             <button
               type="submit"
               disabled={rejecting}
-              className="border border-border bg-background px-5 py-3 font-mono text-[11px] uppercase tracking-[0.2em] text-muted-foreground transition-colors hover:border-foreground hover:text-foreground disabled:opacity-40"
+              className="rounded-full border border-border bg-background px-5 py-3 font-mono text-[11px] uppercase tracking-[0.2em] text-muted-foreground transition-colors hover:border-foreground hover:text-foreground disabled:opacity-40"
             >
               {rejecting ? 'Archiving…' : 'Archive'}
             </button>
@@ -256,7 +256,7 @@ export function SubmissionCard({ submission }: { submission: Submission }) {
             <button
               type="submit"
               disabled={reopening}
-              className="border border-border bg-background px-5 py-3 font-mono text-[11px] uppercase tracking-[0.2em] text-foreground transition-colors hover:border-[var(--endo-red)] hover:text-[var(--endo-red)] disabled:opacity-40"
+              className="rounded-full border border-border bg-background px-5 py-3 font-mono text-[11px] uppercase tracking-[0.2em] text-foreground transition-colors hover:border-[var(--endo-red)] hover:text-[var(--endo-red)] disabled:opacity-40"
             >
               {reopening
                 ? 'Moving…'
