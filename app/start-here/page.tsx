@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import Image from 'next/image'
 import Link from 'next/link'
 
 import { PageHeader } from '@/components/page-header'
@@ -33,11 +34,22 @@ const FACTS = [
 export default function StartHerePage() {
   return (
     <div className="mx-auto max-w-5xl px-6 py-10 md:px-10 md:py-14">
-      <PageHeader
-        eyebrow="Start here"
-        title="START HERE"
-        intro="The short version, in four questions. Tap any of them to open."
-      />
+      <div className="grid gap-8 md:grid-cols-[1.1fr_0.9fr] md:items-end">
+        <PageHeader
+          eyebrow="Start here"
+          title="START HERE"
+          intro="The short version, in four questions. Tap any of them to open."
+        />
+        <div className="relative hidden aspect-[4/3] overflow-hidden rounded-3xl border border-border bg-card md:block">
+          <Image
+            src="/images/watercolor-sunset.jpg"
+            alt="Pink and gold watercolor painting of a sunset reflected on water"
+            fill
+            sizes="40vw"
+            className="object-cover"
+          />
+        </div>
+      </div>
 
       <div className="mt-8 space-y-3">
         {FACTS.map((fact) => (

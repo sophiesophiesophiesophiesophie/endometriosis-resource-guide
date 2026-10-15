@@ -13,7 +13,7 @@ export function SiteFooter() {
               className="font-display text-3xl uppercase tracking-widest"
               style={{ color: 'var(--endo-red)' }}
             >
-              ENDO
+              endometriosis guide
             </Link>
             <p className="mt-2 font-mono text-[11px] uppercase tracking-wide text-muted-foreground">
               A guide by a woman with endometriosis
