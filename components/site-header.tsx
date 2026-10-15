@@ -20,7 +20,7 @@ export function SiteHeader() {
             style={{ color: 'var(--endo-red)' }}
             onClick={() => setOpen(false)}
           >
-            ENDO
+            endometriosis guide
           </Link>
 
           {/* Desktop nav */}
