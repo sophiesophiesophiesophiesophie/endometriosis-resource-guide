@@ -39,8 +39,9 @@ export default function Home() {
           </h1>
 
           <p className="mt-4 max-w-xl text-sm leading-relaxed text-muted-foreground">
-            Hundreds of people with endo answered one question. Pick a section — everything is
-            sorted by cost and effort, so you can skim, tap, and go.
+            This is a crowdsourced guide with advice from hundreds of people with endometriosis.
+            Everything is sorted by cost and effort, so you can filter by what fits your
+            circumstances best.
           </p>
 
           <div className="mt-8 flex flex-col gap-3 sm:flex-row">
