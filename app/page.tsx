@@ -5,6 +5,20 @@ import { SectionCard } from '@/components/section-card'
 import { SuggestBanner } from '@/components/suggest-banner'
 import { LAST_UPDATED, SECTION_CARDS } from '@/lib/content'
 
+function ImageTile({ src, alt }: { src: string; alt: string }) {
+  return (
+    <div className="relative aspect-square overflow-hidden rounded-2xl border border-border bg-card">
+      <Image
+        src={src}
+        alt={alt}
+        fill
+        sizes="(min-width: 1280px) 25vw, (min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"
+        className="object-cover"
+      />
+    </div>
+  )
+}
+
 export default function Home() {
   return (
     <>
@@ -95,7 +109,25 @@ export default function Home() {
         </div>
 
         <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
-          {SECTION_CARDS.map((card) => (
+          {SECTION_CARDS.slice(0, 2).map((card) => (
+            <SectionCard key={card.href} card={card} />
+          ))}
+          <ImageTile
+            src="/images/butterfly-pattern.jpg"
+            alt="Close-up watercolor pattern of pink and burgundy butterfly wings"
+          />
+          {SECTION_CARDS.slice(2, 4).map((card) => (
+            <SectionCard key={card.href} card={card} />
+          ))}
+          <ImageTile
+            src="/images/lotus-leaves.jpg"
+            alt="Translucent lotus leaves backlit against a pale sky"
+          />
+          {SECTION_CARDS.slice(4, 6).map((card) => (
+            <SectionCard key={card.href} card={card} />
+          ))}
+          <ImageTile src="/images/shell.jpg" alt="Macro photo of a spiral seashell" />
+          {SECTION_CARDS.slice(6).map((card) => (
             <SectionCard key={card.href} card={card} />
           ))}
         </div>
