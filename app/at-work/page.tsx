@@ -33,7 +33,7 @@ export default function AtWorkPage() {
         </div>
         <div className="space-y-3">
           {WORK_TIPS.map((tip, i) => (
-            <TipCard key={tip.title} tip={tip} index={i} total={WORK_TIPS.length} />
+            <TipCard key={tip.title} tip={tip} index={i} />
           ))}
         </div>
       </section>
@@ -48,8 +48,8 @@ export default function AtWorkPage() {
           </span>
         </div>
         <div className="space-y-3">
-          {WORK_LONG_BLOCKS.map((block, i) => (
-            <LongBlock key={block.title} block={block} index={i} total={WORK_LONG_BLOCKS.length} />
+          {WORK_LONG_BLOCKS.map((block) => (
+            <LongBlock key={block.title} block={block} />
           ))}
         </div>
         <p className="mt-4 text-[11px] leading-relaxed text-muted-foreground">
