@@ -108,7 +108,7 @@ export default function Home() {
         <div className="relative">
           <BackgroundPhoto
             src="/images/butterfly-pattern.jpg"
-            className="-left-16 -top-12 h-[22rem] w-72 xl:-left-28 xl:h-[26rem] xl:w-80"
+            className="-left-16 -top-4 h-[22rem] w-72 xl:-left-28 xl:h-[26rem] xl:w-80"
           />
           <BackgroundPhoto
             src="/images/lotus-leaves.jpg"
@@ -116,7 +116,7 @@ export default function Home() {
           />
           <BackgroundPhoto
             src="/images/shell.jpg"
-            className="-bottom-16 left-1/3 h-72 w-72 xl:h-80 xl:w-80"
+            className="-bottom-4 left-1/3 h-72 w-72 xl:h-80 xl:w-80"
           />
 
           <div className="relative z-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
