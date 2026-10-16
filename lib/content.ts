@@ -78,6 +78,8 @@ export interface SectionCardMeta {
   title: string
   blurb: string
   meta: string
+  image?: string
+  imageAlt?: string
 }
 
 export const SECTION_CARDS: SectionCardMeta[] = [
@@ -87,6 +89,8 @@ export const SECTION_CARDS: SectionCardMeta[] = [
     title: 'Start here',
     blurb: 'What this guide is, and what endometriosis actually is.',
     meta: '1 min read',
+    image: '/images/butterfly-pattern.jpg',
+    imageAlt: 'Close-up watercolor pattern of pink and burgundy butterfly wings',
   },
   {
     href: '/free-support',
@@ -94,6 +98,8 @@ export const SECTION_CARDS: SectionCardMeta[] = [
     title: 'Free ways to help',
     blurb: 'Acts of service that cost nothing. Sorted by effort.',
     meta: '10 ideas',
+    image: '/images/lotus-leaves.jpg',
+    imageAlt: 'Translucent lotus leaves backlit against a pale sky',
   },
   {
     href: '/spend-money',
@@ -129,6 +135,8 @@ export const SECTION_CARDS: SectionCardMeta[] = [
     title: 'Research',
     blurb: 'One thing to read, watch, and listen to. No homework.',
     meta: 'Links out',
+    image: '/images/shell.jpg',
+    imageAlt: 'Macro photo of a spiral seashell',
   },
 ]
 

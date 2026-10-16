@@ -100,36 +100,6 @@ export default function Home() {
           ))}
         </div>
 
-        <div className="mt-12 grid grid-cols-3 gap-4">
-          <div className="relative aspect-[3/4] overflow-hidden rounded-2xl border border-border bg-card">
-            <Image
-              src="/images/butterfly-pattern.jpg"
-              alt="Close-up watercolor pattern of pink and burgundy butterfly wings"
-              fill
-              sizes="(min-width: 768px) 30vw, 33vw"
-              className="object-cover"
-            />
-          </div>
-          <div className="relative aspect-[3/4] overflow-hidden rounded-2xl border border-border bg-card sm:mt-8">
-            <Image
-              src="/images/shell.jpg"
-              alt="Macro photo of a spiral seashell"
-              fill
-              sizes="(min-width: 768px) 30vw, 33vw"
-              className="object-cover"
-            />
-          </div>
-          <div className="relative aspect-[3/4] overflow-hidden rounded-2xl border border-border bg-card">
-            <Image
-              src="/images/lotus-leaves.jpg"
-              alt="Translucent lotus leaves backlit against a pale sky"
-              fill
-              sizes="(min-width: 768px) 30vw, 33vw"
-              className="object-cover"
-            />
-          </div>
-        </div>
-
         <div className="mt-12">
           <SuggestBanner
             heading={
