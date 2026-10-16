@@ -263,7 +263,7 @@ const SPEND_SEED: SpendTip[] = [
     category: 'Healthcare',
     cost: 'High',
     detail:
-      'People with endo are more likely to have a hyperactive pelvic floor and tightness in the hips, which can contribute to pain and symptoms. Physio can help relieve them.',
+      'Some people with endo have a hyperactive pelvic floor and tightness in the hips, which can contribute to pain and symptoms. Physio can help relieve them.',
   },
   {
     title: 'High-cost supplements',
@@ -294,7 +294,7 @@ const SPEND_SEED: SpendTip[] = [
     title: 'Organic underwear',
     category: 'Items',
     cost: 'High',
-    detail: 'Reduces exposure of toxins to the pelvic area and increases comfort.',
+    detail: 'Some people prefer organic, chemical-free fabrics against sensitive skin for extra comfort.',
   },
 ]
 
@@ -386,7 +386,7 @@ export const WORK_LONG_BLOCKS: LongBlock[] = [
     title: 'Your legal duties in the UK',
     body: [
       'Endometriosis is not automatically a disability under the Equality Act 2010, but it can meet the legal definition where symptoms have a substantial, long-term adverse effect on normal day-to-day activities. Fluctuating or episodic conditions still count if the overall impact is substantial.',
-      'Where it qualifies, employers have a legal duty to make reasonable adjustments, including for absence or sickness records linked to the condition. A 2026 Employment Appeal Tribunal case, Pal v Accenture UK, confirmed endometriosis can amount to a disability and trigger that duty, including around performance management.',
+      'Where it qualifies, employers have a legal duty to make reasonable adjustments, including for absence or sickness records linked to the condition, and that duty can extend to how performance is managed.',
       'Worth flagging the difference between two things people confuse: a reasonable adjustment (a legal duty if you meet the disability test) and a flexible working request, which is a separate, weaker right. Every employee can request flexible working, but employers only have to consider it reasonably, not grant it.',
     ],
   },
