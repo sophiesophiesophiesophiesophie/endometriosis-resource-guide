@@ -80,6 +80,7 @@ export function FilterList<T extends Tip>({
             key={item.title}
             tip={item}
             index={i}
+            total={visible.length}
             badge={badgeKey ? String(item[badgeKey]) : undefined}
           />
         ))}

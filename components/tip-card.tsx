@@ -3,7 +3,16 @@ import type { Tip } from '@/lib/content'
 interface TipCardProps {
   tip: Tip
   index?: number
+  /** Total items in the list, used to tint later cards a deeper pink. */
+  total?: number
   badge?: string
+}
+
+/** 0 at the top of a list, deepening toward the bottom. */
+function ombreStyle(index?: number, total?: number) {
+  if (typeof index !== 'number' || !total || total < 2) return undefined
+  const pct = Math.round((index / (total - 1)) * 60)
+  return { backgroundColor: `color-mix(in srgb, var(--endo-red) ${pct}%, var(--card))` }
 }
 
 function ExternalLink({ href, label }: { href: string; label?: string }) {
@@ -24,9 +33,10 @@ function ExternalLink({ href, label }: { href: string; label?: string }) {
  * that expands — the page stays scannable and nobody has to read what they
  * didn't ask for.
  */
-export function TipCard({ tip, index, badge }: TipCardProps) {
+export function TipCard({ tip, index, total, badge }: TipCardProps) {
   const number =
     typeof index === 'number' ? String(index + 1).padStart(2, '0') : undefined
+  const style = ombreStyle(index, total)
 
   const heading = (
     <>
@@ -50,14 +60,17 @@ export function TipCard({ tip, index, badge }: TipCardProps) {
 
   if (!hasMore) {
     return (
-      <div className="flex items-start gap-4 rounded-xl border border-border bg-card p-4">
+      <div className="flex items-start gap-4 rounded-xl border border-border bg-card p-4" style={style}>
         {heading}
       </div>
     )
   }
 
   return (
-    <details className="group rounded-xl border border-border bg-card transition-colors open:border-[var(--endo-red)]">
+    <details
+      className="group rounded-xl border border-border bg-card transition-colors open:border-[var(--endo-red)]"
+      style={style}
+    >
       <summary className="flex cursor-pointer list-none items-start gap-4 p-4 [&::-webkit-details-marker]:hidden">
         {heading}
         <span
