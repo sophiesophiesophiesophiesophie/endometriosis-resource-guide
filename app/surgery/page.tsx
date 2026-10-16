@@ -41,7 +41,7 @@ export default function SurgeryPage() {
             </div>
             <div className="space-y-3">
               {stage.tips.map((tip, i) => (
-                <TipCard key={tip.title} tip={tip} index={i} total={stage.tips.length} />
+                <TipCard key={tip.title} tip={tip} index={i} />
               ))}
             </div>
           </section>

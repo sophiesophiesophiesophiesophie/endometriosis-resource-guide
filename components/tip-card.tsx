@@ -3,15 +3,20 @@ import type { Tip } from '@/lib/content'
 interface TipCardProps {
   tip: Tip
   index?: number
-  /** Total items in the list, used to tint later cards a deeper pink. */
-  total?: number
+  /** Low/Medium/High — tints the card so cost or effort reads at a glance. */
+  level?: string
   badge?: string
 }
 
-/** 0 at the top of a list, deepening toward the bottom. */
-function ombreStyle(index?: number, total?: number) {
-  if (typeof index !== 'number' || !total || total < 2) return undefined
-  const pct = Math.round((index / (total - 1)) * 60)
+const LEVEL_TINT: Record<string, number> = {
+  Low: 0,
+  Medium: 22,
+  High: 40,
+}
+
+function levelStyle(level?: string) {
+  const pct = level ? LEVEL_TINT[level] : undefined
+  if (!pct) return undefined
   return { backgroundColor: `color-mix(in srgb, var(--endo-red) ${pct}%, var(--card))` }
 }
 
@@ -33,22 +38,22 @@ function ExternalLink({ href, label }: { href: string; label?: string }) {
  * that expands — the page stays scannable and nobody has to read what they
  * didn't ask for.
  */
-export function TipCard({ tip, index, total, badge }: TipCardProps) {
+export function TipCard({ tip, index, level, badge }: TipCardProps) {
   const number =
     typeof index === 'number' ? String(index + 1).padStart(2, '0') : undefined
-  const style = ombreStyle(index, total)
+  const style = levelStyle(level)
 
   const heading = (
     <>
       {number && (
-        <span className="w-6 shrink-0 pt-0.5 text-right font-mono text-[10px] text-muted-foreground">
+        <span className="w-6 shrink-0 pt-0.5 text-right font-mono text-[10px] text-foreground/55">
           {number}
         </span>
       )}
       <span className="flex-1 text-sm leading-relaxed text-foreground">
         {tip.title}
         {badge && (
-          <span className="ml-2 whitespace-nowrap rounded-full border border-border px-1.5 py-0.5 align-middle font-mono text-[9px] uppercase tracking-[0.15em] text-muted-foreground">
+          <span className="ml-2 whitespace-nowrap rounded-full border border-foreground/20 px-1.5 py-0.5 align-middle font-mono text-[9px] uppercase tracking-[0.15em] text-foreground/60">
             {badge}
           </span>
         )}
