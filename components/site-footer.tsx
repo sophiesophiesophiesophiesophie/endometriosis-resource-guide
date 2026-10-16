@@ -5,7 +5,7 @@ import { LAST_UPDATED, NAV_ITEMS } from '@/lib/content'
 export function SiteFooter() {
   return (
     <footer className="border-t border-border">
-      <div className="mx-auto max-w-5xl px-6 py-10 md:px-10">
+      <div className="mx-auto max-w-7xl px-6 py-10 md:px-10">
         <div className="flex flex-col gap-8 md:flex-row md:justify-between">
           <div>
             <Link

@@ -20,7 +20,7 @@ export default function Home() {
           aria-hidden="true"
         />
 
-        <div className="mx-auto max-w-5xl px-6 pb-12 pt-12 md:px-10 md:pb-16 md:pt-16">
+        <div className="mx-auto max-w-7xl px-6 pb-12 pt-12 md:px-10 md:pb-16 md:pt-16">
           <div className="mb-6 flex justify-end">
             <span className="font-mono text-[10px] uppercase tracking-[0.25em] text-muted-foreground">
               Last updated: {LAST_UPDATED}
@@ -84,7 +84,7 @@ export default function Home() {
         </div>
       </header>
 
-      <div className="mx-auto max-w-5xl px-6 py-12 md:px-10 md:py-16">
+      <div className="mx-auto max-w-7xl px-6 py-12 md:px-10 md:py-16">
         <div className="mb-8 flex items-baseline justify-between border-b border-border pb-4">
           <h2 className="font-display text-2xl uppercase leading-none tracking-wide text-foreground">
             Pick a section
@@ -94,10 +94,40 @@ export default function Home() {
           </span>
         </div>
 
-        <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
           {SECTION_CARDS.map((card) => (
             <SectionCard key={card.href} card={card} />
           ))}
+        </div>
+
+        <div className="mt-12 grid grid-cols-3 gap-4">
+          <div className="relative aspect-[3/4] overflow-hidden rounded-2xl border border-border bg-card">
+            <Image
+              src="/images/butterfly-pattern.jpg"
+              alt="Close-up watercolor pattern of pink and burgundy butterfly wings"
+              fill
+              sizes="(min-width: 768px) 30vw, 33vw"
+              className="object-cover"
+            />
+          </div>
+          <div className="relative aspect-[3/4] overflow-hidden rounded-2xl border border-border bg-card sm:mt-8">
+            <Image
+              src="/images/shell.jpg"
+              alt="Macro photo of a spiral seashell"
+              fill
+              sizes="(min-width: 768px) 30vw, 33vw"
+              className="object-cover"
+            />
+          </div>
+          <div className="relative aspect-[3/4] overflow-hidden rounded-2xl border border-border bg-card">
+            <Image
+              src="/images/lotus-leaves.jpg"
+              alt="Translucent lotus leaves backlit against a pale sky"
+              fill
+              sizes="(min-width: 768px) 30vw, 33vw"
+              className="object-cover"
+            />
+          </div>
         </div>
 
         <div className="mt-12">

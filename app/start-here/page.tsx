@@ -33,7 +33,7 @@ const FACTS = [
 
 export default function StartHerePage() {
   return (
-    <div className="mx-auto max-w-5xl px-6 py-10 md:px-10 md:py-14">
+    <div className="mx-auto max-w-7xl px-6 py-10 md:px-10 md:py-14">
       <div className="grid gap-8 md:grid-cols-[1.1fr_0.9fr] md:items-end">
         <PageHeader
           eyebrow="Start here"

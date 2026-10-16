@@ -12,7 +12,7 @@ export function SiteHeader() {
 
   return (
     <header className="sticky top-0 z-50 border-b border-border bg-background/95 backdrop-blur-sm">
-      <div className="mx-auto max-w-6xl px-6 md:px-10">
+      <div className="mx-auto max-w-7xl px-6 md:px-10">
         <div className="flex h-16 items-center justify-between gap-6">
           <Link
             href="/"
@@ -72,7 +72,7 @@ export function SiteHeader() {
           className="border-t border-border bg-background lg:hidden"
           aria-label="Sections"
         >
-          <div className="mx-auto max-w-6xl px-6 md:px-10">
+          <div className="mx-auto max-w-7xl px-6 md:px-10">
             {NAV_ITEMS.map((item) => {
               const active = pathname === item.href
               return (
