@@ -1,12 +1,12 @@
 import { Analytics } from '@vercel/analytics/next'
 import type { Metadata, Viewport } from 'next'
-import { Anton, Caveat, Inter, IBM_Plex_Mono } from 'next/font/google'
+import { Caveat, IM_Fell_DW_Pica, Inter, IBM_Plex_Mono } from 'next/font/google'
 
 import { SiteFooter } from '@/components/site-footer'
 import { SiteHeader } from '@/components/site-header'
 import './globals.css'
 
-const _anton = Anton({
+const _imFellDwPica = IM_Fell_DW_Pica({
   subsets: ['latin'],
   weight: '400',
 })
