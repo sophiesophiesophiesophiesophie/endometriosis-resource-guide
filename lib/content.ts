@@ -39,7 +39,7 @@ export interface NavItem {
   href: string
 }
 
-export const LAST_UPDATED = '4th August 2026'
+export const LAST_UPDATED = '16th October 2026'
 
 const PUBLISHED = publishedData as PublishedEntry[]
 

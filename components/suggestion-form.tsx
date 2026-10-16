@@ -201,7 +201,9 @@ export function SuggestionForm() {
       )}
 
       <p className="mt-6 text-center text-[11px] leading-relaxed text-muted-foreground">
-        Suggestions go straight to a private inbox. Nothing is published without asking.
+        Suggestions go straight to a private inbox and nothing is published without review. If
+        yours makes it onto the site, it&rsquo;s published anonymously — your name and email are
+        never shown publicly.
       </p>
     </form>
   )
