@@ -93,15 +93,6 @@ export const SECTION_CARDS: SectionCardMeta[] = [
     imageAlt: 'Close-up watercolor pattern of pink and burgundy butterfly wings',
   },
   {
-    href: '/free-support',
-    icon: Heart,
-    title: 'Free ways to help',
-    blurb: 'Acts of service that cost nothing. Sorted by effort.',
-    meta: '10 ideas',
-    image: '/images/lotus-leaves.jpg',
-    imageAlt: 'Translucent lotus leaves backlit against a pale sky',
-  },
-  {
     href: '/spend-money',
     icon: Gift,
     title: 'Things to spend money on',
@@ -114,6 +105,15 @@ export const SECTION_CARDS: SectionCardMeta[] = [
     title: 'Surgery support',
     blurb: 'How to show up before, during and after an operation.',
     meta: '6 ideas',
+  },
+  {
+    href: '/free-support',
+    icon: Heart,
+    title: 'Free ways to help',
+    blurb: 'Acts of service that cost nothing. Sorted by effort.',
+    meta: '10 ideas',
+    image: '/images/lotus-leaves.jpg',
+    imageAlt: 'Translucent lotus leaves backlit against a pale sky',
   },
   {
     href: '/at-work',
