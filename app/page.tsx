@@ -5,13 +5,13 @@ import { SectionCard } from '@/components/section-card'
 import { SuggestBanner } from '@/components/suggest-banner'
 import { LAST_UPDATED, SECTION_CARDS } from '@/lib/content'
 
-function PeekPhoto({ src, className }: { src: string; className: string }) {
+function BackgroundPhoto({ src, className }: { src: string; className: string }) {
   return (
     <div
       aria-hidden="true"
-      className={`absolute z-0 hidden overflow-hidden rounded-xl border border-border shadow-lg sm:block ${className}`}
+      className={`absolute z-0 hidden overflow-hidden rounded-2xl lg:block ${className}`}
     >
-      <Image src={src} alt="" fill sizes="110px" className="object-cover" />
+      <Image src={src} alt="" fill sizes="480px" className="object-cover" />
     </div>
   )
 }
@@ -105,42 +105,25 @@ export default function Home() {
           </span>
         </div>
 
-        <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
-          {SECTION_CARDS.map((card, i) => {
-            const isFirst = i === 0
-            const isSecond = i === 1
-            const isLast = i === SECTION_CARDS.length - 1
+        <div className="relative">
+          <BackgroundPhoto
+            src="/images/butterfly-pattern.jpg"
+            className="-left-16 -top-12 h-[22rem] w-72 xl:-left-28 xl:h-[26rem] xl:w-80"
+          />
+          <BackgroundPhoto
+            src="/images/lotus-leaves.jpg"
+            className="-right-16 top-20 h-[22rem] w-72 xl:-right-28 xl:h-[26rem] xl:w-80"
+          />
+          <BackgroundPhoto
+            src="/images/shell.jpg"
+            className="-bottom-16 left-1/3 h-72 w-72 xl:h-80 xl:w-80"
+          />
 
-            if (!isFirst && !isSecond && !isLast) {
-              return <SectionCard key={card.href} card={card} />
-            }
-
-            return (
-              <div key={card.href} className="relative">
-                {isFirst && (
-                  <PeekPhoto
-                    src="/images/butterfly-pattern.jpg"
-                    className="-left-5 top-8 h-24 w-20 -rotate-6"
-                  />
-                )}
-                {isSecond && (
-                  <PeekPhoto
-                    src="/images/lotus-leaves.jpg"
-                    className="-top-6 right-6 h-20 w-24 rotate-3"
-                  />
-                )}
-                {isLast && (
-                  <PeekPhoto
-                    src="/images/shell.jpg"
-                    className="-bottom-6 right-6 h-20 w-20 rotate-6"
-                  />
-                )}
-                <div className="relative z-10 h-full">
-                  <SectionCard card={card} />
-                </div>
-              </div>
-            )
-          })}
+          <div className="relative z-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+            {SECTION_CARDS.map((card) => (
+              <SectionCard key={card.href} card={card} />
+            ))}
+          </div>
         </div>
 
         <div className="mt-12">
