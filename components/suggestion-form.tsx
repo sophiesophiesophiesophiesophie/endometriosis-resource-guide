@@ -1,5 +1,6 @@
 'use client'
 
+import { MailCheck } from 'lucide-react'
 import { useState } from 'react'
 
 import { NAV_ITEMS } from '@/lib/content'
@@ -62,9 +63,12 @@ export function SuggestionForm() {
   if (status === 'sent') {
     return (
       <div className="rounded-2xl border border-[var(--endo-red)] bg-card p-8 text-center">
-        <p aria-hidden="true" className="text-3xl">
-          💌
-        </p>
+        <MailCheck
+          aria-hidden="true"
+          className="mx-auto h-9 w-9"
+          strokeWidth={1.5}
+          style={{ color: 'var(--endo-red)' }}
+        />
         <h2 className="mt-4 font-display text-3xl uppercase leading-none text-foreground">
           Sent. Thank you.
         </h2>

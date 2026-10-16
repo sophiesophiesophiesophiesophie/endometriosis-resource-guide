@@ -1,3 +1,4 @@
+import { Search } from 'lucide-react'
 import type { Metadata } from 'next'
 import Link from 'next/link'
 
@@ -48,8 +49,14 @@ export default function SurgeryPage() {
       </div>
 
       <section className="mt-10 rounded-2xl border border-border bg-card p-6">
-        <h2 className="font-display text-xl uppercase leading-none text-foreground">
-          🔎 Surgery research: where to start
+        <h2 className="flex items-center gap-2 font-display text-xl uppercase leading-none text-foreground">
+          <Search
+            aria-hidden="true"
+            className="h-5 w-5 shrink-0"
+            strokeWidth={1.75}
+            style={{ color: 'var(--endo-red)' }}
+          />
+          Surgery research: where to start
         </h2>
         <p className="mt-3 max-w-2xl text-[13px] leading-relaxed text-muted-foreground">
           The research section has a report, a film, and a channel worth an evening of your time.

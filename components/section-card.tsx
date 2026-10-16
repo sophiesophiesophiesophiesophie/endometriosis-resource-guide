@@ -9,8 +9,11 @@ export function SectionCard({ card }: { card: SectionCardMeta }) {
       className="group flex flex-col justify-between rounded-2xl border border-border bg-card p-6 transition-colors hover:border-[var(--endo-red)] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--endo-red)]"
     >
       <div>
-        <span aria-hidden="true" className="block text-2xl leading-none">
-          {card.emoji}
+        <span
+          aria-hidden="true"
+          className="flex h-10 w-10 items-center justify-center rounded-xl bg-background"
+        >
+          <card.icon className="h-5 w-5" strokeWidth={1.75} style={{ color: 'var(--endo-red)' }} />
         </span>
         <h2 className="mt-4 font-display text-xl uppercase leading-none tracking-wide text-foreground transition-colors group-hover:text-[var(--endo-red)]">
           {card.title}

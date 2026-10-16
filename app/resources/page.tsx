@@ -24,7 +24,13 @@ export default function ResourcesPage() {
         {RESOURCE_GROUPS.map((group) => (
           <section key={group.label} className="flex flex-col rounded-2xl border border-border bg-card p-6">
             <h2 className="mb-5 flex items-center gap-2 border-b border-border pb-4 font-display text-base uppercase tracking-wide text-foreground">
-              <span aria-hidden="true">{group.emoji}</span> {group.label}
+              <group.icon
+                aria-hidden="true"
+                className="h-4 w-4 shrink-0"
+                strokeWidth={1.75}
+                style={{ color: 'var(--endo-red)' }}
+              />
+              {group.label}
             </h2>
 
             {group.items.length === 0 ? (
