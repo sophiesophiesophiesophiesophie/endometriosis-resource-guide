@@ -5,7 +5,7 @@
  */
 
 const TO = process.env.SUGGESTIONS_TO || 'lucy.aitchison3@gmail.com'
-const FROM = process.env.SUGGESTIONS_FROM || 'ENDO guide <onboarding@resend.dev>'
+const FROM = process.env.SUGGESTIONS_FROM || 'endometriosis guide <onboarding@resend.dev>'
 
 function escapeHtml(value: string) {
   return value
@@ -31,27 +31,27 @@ export async function notifyNewSuggestion(input: {
     input.message.length > 400 ? `${input.message.slice(0, 400)}…` : input.message
 
   const html = `
-    <div style="font-family: -apple-system, Segoe UI, Helvetica, Arial, sans-serif; line-height: 1.6; color: #1A1A1A;">
-      <p style="font-size: 12px; letter-spacing: 0.15em; text-transform: uppercase; color: #6B6560; margin: 0 0 16px;">
-        New suggestion — ENDO guide
+    <div style="font-family: -apple-system, Segoe UI, Helvetica, Arial, sans-serif; line-height: 1.6; color: #2B1016;">
+      <p style="font-size: 12px; letter-spacing: 0.15em; text-transform: uppercase; color: #8C5A58; margin: 0 0 16px;">
+        New suggestion — endometriosis guide
       </p>
-      <div style="white-space: pre-wrap; border-left: 4px solid #E8251A; padding: 4px 0 4px 16px; margin: 0 0 8px; font-size: 15px;">
+      <div style="white-space: pre-wrap; border-left: 4px solid #6E1E30; padding: 4px 0 4px 16px; margin: 0 0 8px; font-size: 15px;">
         ${escapeHtml(preview)}
       </div>
-      <p style="font-size: 13px; color: #6B6560; margin: 0 0 24px;">
+      <p style="font-size: 13px; color: #8C5A58; margin: 0 0 24px;">
         Suggested section: ${escapeHtml(input.topic || 'Not specified')}
       </p>
-      <a href="${input.reviewUrl}" style="display: inline-block; background: #E8251A; color: #F2F0EC; padding: 14px 24px; text-decoration: none; font-size: 12px; letter-spacing: 0.2em; text-transform: uppercase;">
+      <a href="${input.reviewUrl}" style="display: inline-block; background: #6E1E30; color: #F7E9DE; padding: 14px 24px; text-decoration: none; font-size: 12px; letter-spacing: 0.2em; text-transform: uppercase;">
         Review it
       </a>
-      <p style="font-size: 12px; color: #6B6560; margin: 24px 0 0;">
+      <p style="font-size: 12px; color: #8C5A58; margin: 24px 0 0;">
         Approve, edit, or reject it there. Approving puts it on the site in about a minute.
       </p>
     </div>
   `
 
   const text = [
-    'New suggestion — ENDO guide',
+    'New suggestion — endometriosis guide',
     '',
     preview,
     '',
@@ -70,7 +70,7 @@ export async function notifyNewSuggestion(input: {
       body: JSON.stringify({
         from: FROM,
         to: [TO],
-        subject: 'New suggestion for the ENDO guide',
+        subject: 'New suggestion for the endometriosis guide',
         html,
         text,
       }),

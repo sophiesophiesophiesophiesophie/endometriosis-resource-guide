@@ -16,7 +16,7 @@ export function SiteHeader() {
         <div className="flex h-16 items-center justify-between gap-6">
           <Link
             href="/"
-            className="shrink-0 font-display text-base uppercase tracking-widest whitespace-nowrap"
+            className="shrink-0 font-display text-sm uppercase tracking-normal whitespace-nowrap sm:text-base sm:tracking-widest"
             style={{ color: 'var(--endo-red)' }}
             onClick={() => setOpen(false)}
           >

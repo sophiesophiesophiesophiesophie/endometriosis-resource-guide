@@ -12,6 +12,7 @@ function BackgroundPhoto({ src, className }: { src: string; className: string })
       className={`absolute z-0 hidden overflow-hidden rounded-2xl lg:block ${className}`}
     >
       <Image src={src} alt="" fill sizes="480px" className="object-cover" />
+      <div className="absolute inset-0 bg-foreground/35" />
     </div>
   )
 }
@@ -108,15 +109,15 @@ export default function Home() {
         <div className="relative">
           <BackgroundPhoto
             src="/images/butterfly-pattern.jpg"
-            className="-left-16 -top-4 h-[22rem] w-72 xl:-left-28 xl:h-[26rem] xl:w-80"
+            className="-left-20 -top-4 h-48 w-40 xl:-left-32 xl:h-56 xl:w-44"
           />
           <BackgroundPhoto
             src="/images/lotus-leaves.jpg"
-            className="-right-16 top-20 h-[22rem] w-72 xl:-right-28 xl:h-[26rem] xl:w-80"
+            className="-right-20 top-1/2 h-[22rem] w-72 -translate-y-1/2 xl:-right-36 xl:h-[26rem] xl:w-80"
           />
           <BackgroundPhoto
             src="/images/shell.jpg"
-            className="-bottom-4 left-1/3 h-72 w-72 xl:h-80 xl:w-80"
+            className="-bottom-4 -left-16 h-48 w-48 xl:-left-28 xl:h-56 xl:w-52"
           />
 
           <div className="relative z-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
