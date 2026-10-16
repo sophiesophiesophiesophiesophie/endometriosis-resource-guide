@@ -16,7 +16,7 @@ export function SiteFooter() {
               endometriosis <span className="font-script text-[1.3em] normal-case tracking-normal">guide</span>
             </Link>
             <p className="mt-2 font-mono text-[11px] uppercase tracking-wide text-muted-foreground">
-              A guide by a woman with endometriosis
+              A crowdsourced guide, by people with endometriosis
             </p>
             <Link
               href="/suggest"
