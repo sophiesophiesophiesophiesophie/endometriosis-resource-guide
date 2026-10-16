@@ -5,18 +5,6 @@ import { SectionCard } from '@/components/section-card'
 import { SuggestBanner } from '@/components/suggest-banner'
 import { LAST_UPDATED, SECTION_CARDS } from '@/lib/content'
 
-function BackgroundPhoto({ src, className }: { src: string; className: string }) {
-  return (
-    <div
-      aria-hidden="true"
-      className={`absolute z-0 hidden overflow-hidden rounded-2xl lg:block ${className}`}
-    >
-      <Image src={src} alt="" fill sizes="480px" className="object-cover" />
-      <div className="absolute inset-0 bg-foreground/35" />
-    </div>
-  )
-}
-
 export default function Home() {
   return (
     <>
@@ -106,25 +94,10 @@ export default function Home() {
           </span>
         </div>
 
-        <div className="relative">
-          <BackgroundPhoto
-            src="/images/butterfly-pattern.jpg"
-            className="-left-20 -top-4 h-48 w-40 xl:-left-32 xl:h-56 xl:w-44"
-          />
-          <BackgroundPhoto
-            src="/images/lotus-leaves.jpg"
-            className="-right-20 top-1/2 h-[22rem] w-72 -translate-y-1/2 xl:-right-36 xl:h-[26rem] xl:w-80"
-          />
-          <BackgroundPhoto
-            src="/images/shell.jpg"
-            className="-bottom-4 -left-16 h-48 w-48 xl:-left-28 xl:h-56 xl:w-52"
-          />
-
-          <div className="relative z-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
-            {SECTION_CARDS.map((card) => (
-              <SectionCard key={card.href} card={card} />
-            ))}
-          </div>
+        <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+          {SECTION_CARDS.map((card) => (
+            <SectionCard key={card.href} card={card} />
+          ))}
         </div>
 
         <div className="mt-12">
