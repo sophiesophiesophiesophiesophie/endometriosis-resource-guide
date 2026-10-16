@@ -38,7 +38,7 @@ export default function StartHerePage() {
         <PageHeader
           eyebrow="Start here"
           title="START HERE"
-          intro="The short version, in four questions. Tap any of them to open."
+          intro="Tap each question to open the answer."
         />
         <div className="relative hidden aspect-[4/3] overflow-hidden rounded-3xl border border-border bg-card md:block">
           <Image
@@ -107,9 +107,12 @@ export default function StartHerePage() {
               className="group flex items-center justify-between gap-4 rounded-xl border border-border bg-card p-4 transition-colors hover:border-[var(--endo-red)]"
             >
               <span className="flex items-center gap-3">
-                <span aria-hidden="true" className="text-lg">
-                  {card.emoji}
-                </span>
+                <card.icon
+                  aria-hidden="true"
+                  className="h-4 w-4 shrink-0"
+                  strokeWidth={1.75}
+                  style={{ color: 'var(--endo-red)' }}
+                />
                 <span className="text-sm text-foreground">{card.title}</span>
               </span>
               <span

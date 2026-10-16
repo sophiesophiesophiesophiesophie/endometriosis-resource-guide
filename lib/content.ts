@@ -6,6 +6,20 @@
 // approved on /review, which land in data/published.json. `withPublished()`
 // stitches them together.
 
+import {
+  AtSign,
+  BookOpen,
+  Briefcase,
+  Clapperboard,
+  Compass,
+  Gift,
+  Headphones,
+  Heart,
+  MessageCircle,
+  Stethoscope,
+  type LucideIcon,
+} from 'lucide-react'
+
 import publishedData from '@/data/published.json'
 import type { PublishedEntry } from './sections'
 
@@ -60,7 +74,7 @@ export const NAV_ITEMS: NavItem[] = [
 
 export interface SectionCardMeta {
   href: string
-  emoji: string
+  icon: LucideIcon
   title: string
   blurb: string
   meta: string
@@ -69,49 +83,49 @@ export interface SectionCardMeta {
 export const SECTION_CARDS: SectionCardMeta[] = [
   {
     href: '/start-here',
-    emoji: '👋',
+    icon: Compass,
     title: 'Start here',
     blurb: 'What this guide is, and what endometriosis actually is.',
     meta: '1 min read',
   },
   {
     href: '/free-support',
-    emoji: '💛',
+    icon: Heart,
     title: 'Free ways to help',
     blurb: 'Acts of service that cost nothing. Sorted by effort.',
     meta: '10 ideas',
   },
   {
     href: '/spend-money',
-    emoji: '🎁',
+    icon: Gift,
     title: 'Things to spend money on',
     blurb: 'Gifts and spends that genuinely help. Sorted by cost.',
     meta: '17 ideas',
   },
   {
     href: '/surgery',
-    emoji: '🏥',
+    icon: Stethoscope,
     title: 'Surgery support',
     blurb: 'How to show up before, during and after an operation.',
     meta: '6 ideas',
   },
   {
     href: '/at-work',
-    emoji: '💼',
+    icon: Briefcase,
     title: 'Endo at work',
     blurb: 'For employers and colleagues. Includes your legal duties.',
     meta: '9 ideas + the law',
   },
   {
     href: '/advice',
-    emoji: '💬',
+    icon: MessageCircle,
     title: 'General advice',
     blurb: 'The big ones, and everything that fits nowhere else.',
     meta: '3 ideas',
   },
   {
     href: '/resources',
-    emoji: '📚',
+    icon: BookOpen,
     title: 'Research',
     blurb: 'One thing to read, watch, and listen to. No homework.',
     meta: 'Links out',
@@ -412,14 +426,14 @@ const ADVICE_SEED: Tip[] = [
 // ---------------------------------------------------------------------------
 
 export interface ResourceGroup {
-  emoji: string
+  icon: LucideIcon
   label: string
   items: Tip[]
 }
 
 const RESOURCE_SEED: ResourceGroup[] = [
   {
-    emoji: '📖',
+    icon: BookOpen,
     label: 'To read',
     items: [
       {
@@ -430,7 +444,7 @@ const RESOURCE_SEED: ResourceGroup[] = [
     ],
   },
   {
-    emoji: '🎬',
+    icon: Clapperboard,
     label: 'To watch',
     items: [
       {
@@ -441,7 +455,7 @@ const RESOURCE_SEED: ResourceGroup[] = [
     ],
   },
   {
-    emoji: '🎧',
+    icon: Headphones,
     label: 'To listen',
     items: [
       {
@@ -452,7 +466,7 @@ const RESOURCE_SEED: ResourceGroup[] = [
     ],
   },
   {
-    emoji: '👣',
+    icon: AtSign,
     label: 'To follow',
     items: [],
   },

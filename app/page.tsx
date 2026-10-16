@@ -100,36 +100,13 @@ export default function Home() {
           ))}
         </div>
 
-        <div className="mt-12 grid gap-8 md:grid-cols-2 md:items-center">
-          <div className="relative aspect-[4/3] overflow-hidden rounded-3xl border border-border bg-card md:order-2">
-            <Image
-              src="/images/butterfly-pattern.jpg"
-              alt="Close-up watercolor pattern of pink and burgundy butterfly wings"
-              fill
-              sizes="(min-width: 768px) 40vw, 90vw"
-              className="object-cover"
-            />
-          </div>
-          <div className="md:order-1">
-            <h2 className="font-display text-2xl uppercase leading-none tracking-wide text-foreground">
-              Written by someone who gets it
-            </h2>
-            <p className="mt-4 max-w-md text-[13px] leading-relaxed text-muted-foreground">
-              This guide comes from Lucy, who has had two surgeries and ten years of symptoms —
-              plus hundreds of people who added what actually helped them too.
-            </p>
-            <Link
-              href="/start-here"
-              className="mt-6 inline-flex items-center gap-2 rounded-full border border-border bg-background px-5 py-3 font-mono text-[11px] uppercase tracking-[0.2em] text-foreground transition-colors hover:border-[var(--endo-red)] hover:text-[var(--endo-red)]"
-            >
-              Meet the person behind it →
-            </Link>
-          </div>
-        </div>
-
         <div className="mt-12">
           <SuggestBanner
-            heading="This guide is crowdsourced"
+            heading={
+              <>
+                This guide is <span className="font-script text-[1.3em] leading-none">crowdsourced</span>
+              </>
+            }
             body="It only exists because people shared what worked for them. Add yours — it takes about thirty seconds, and you don’t have to leave your name."
           />
         </div>

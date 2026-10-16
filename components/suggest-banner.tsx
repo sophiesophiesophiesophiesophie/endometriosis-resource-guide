@@ -1,10 +1,17 @@
 import Link from 'next/link'
+import type { ReactNode } from 'react'
+
+const DEFAULT_HEADING = (
+  <>
+    Got <span className="font-script text-[1.3em] leading-none">something</span> to add?
+  </>
+)
 
 export function SuggestBanner({
-  heading = 'Got something to add?',
+  heading = DEFAULT_HEADING,
   body = 'One box, one button. Tell us what actually helped you — anonymously if you like.',
 }: {
-  heading?: string
+  heading?: ReactNode
   body?: string
 }) {
   return (
