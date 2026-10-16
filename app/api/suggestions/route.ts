@@ -83,7 +83,7 @@ export async function POST(request: Request) {
   // out of the client bundle until a submission actually needs it.
   const mailto =
     `mailto:${fallbackInbox()}` +
-    `?subject=${encodeURIComponent(`ENDO guide suggestion${topic ? ` — ${topic}` : ''}`)}` +
+    `?subject=${encodeURIComponent(`endometriosis guide suggestion${topic ? ` — ${topic}` : ''}`)}` +
     `&body=${encodeURIComponent(
       [message, '', `From: ${name || 'Anonymous'}`, `Reply to: ${email || 'Not given'}`].join('\n'),
     )}`

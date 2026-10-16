@@ -25,14 +25,31 @@ const _ibmPlexMono = IBM_Plex_Mono({
   weight: ['400', '500'],
 })
 
+const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://endometriosis-resource-guide.vercel.app'
+const TITLE = 'How to ACTUALLY help people with endometriosis'
+const DESCRIPTION =
+  'A crowdsourced guide to supporting someone with endometriosis, with advice from hundreds of people with endo — sorted by cost and effort.'
+
 export const metadata: Metadata = {
+  metadataBase: new URL(SITE_URL),
   title: {
-    default: 'How to ACTUALLY help people with endometriosis',
-    template: '%s — ENDO guide',
+    default: TITLE,
+    template: '%s — endometriosis guide',
   },
-  description:
-    'A guide written by a woman with endo, with suggestions from real people with endometriosis — sorted by cost and effort.',
-  generator: 'v0.app',
+  description: DESCRIPTION,
+  openGraph: {
+    title: TITLE,
+    description: DESCRIPTION,
+    url: SITE_URL,
+    siteName: 'endometriosis guide',
+    locale: 'en_GB',
+    type: 'website',
+  },
+  twitter: {
+    card: 'summary',
+    title: TITLE,
+    description: DESCRIPTION,
+  },
 }
 
 export const viewport: Viewport = {
