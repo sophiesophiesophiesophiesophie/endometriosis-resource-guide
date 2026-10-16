@@ -13,7 +13,7 @@ export const metadata: Metadata = {
 
 export default function ResourcesPage() {
   return (
-    <div className="mx-auto max-w-5xl px-6 py-10 md:px-10 md:py-14">
+    <div className="mx-auto max-w-7xl px-6 py-10 md:px-10 md:py-14">
       <PageHeader
         eyebrow="Research: where to start"
         title="RESEARCH"

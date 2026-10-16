@@ -14,7 +14,7 @@ export const metadata: Metadata = {
 
 export default function AdvicePage() {
   return (
-    <div className="mx-auto max-w-5xl px-6 py-10 md:px-10 md:py-14">
+    <div className="mx-auto max-w-7xl px-6 py-10 md:px-10 md:py-14">
       <PageHeader
         eyebrow="Misc / FAQs / general advice"
         title="ADVICE"

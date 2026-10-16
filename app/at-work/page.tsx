@@ -15,7 +15,7 @@ export const metadata: Metadata = {
 
 export default function AtWorkPage() {
   return (
-    <div className="mx-auto max-w-5xl px-6 py-10 md:px-10 md:py-14">
+    <div className="mx-auto max-w-7xl px-6 py-10 md:px-10 md:py-14">
       <PageHeader
         eyebrow="Endo at work"
         title="AT WORK"
