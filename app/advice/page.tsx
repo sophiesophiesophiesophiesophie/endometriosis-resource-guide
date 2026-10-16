@@ -23,7 +23,7 @@ export default function AdvicePage() {
 
       <div className="mt-8 space-y-3">
         {ADVICE_TIPS.map((tip, i) => (
-          <TipCard key={tip.title} tip={tip} index={i} />
+          <TipCard key={tip.title} tip={tip} index={i} total={ADVICE_TIPS.length} />
         ))}
       </div>
 
