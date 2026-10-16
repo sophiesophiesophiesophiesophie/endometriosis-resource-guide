@@ -1,3 +1,4 @@
+import { Info } from 'lucide-react'
 import Image from 'next/image'
 import Link from 'next/link'
 
@@ -85,6 +86,21 @@ export default function Home() {
       </header>
 
       <div className="mx-auto max-w-7xl px-6 py-12 md:px-10 md:py-16">
+        <div className="mb-10 flex gap-3 rounded-xl border border-border bg-card p-4 text-[13px] leading-relaxed text-muted-foreground">
+          <Info
+            aria-hidden="true"
+            className="mt-0.5 h-4 w-4 shrink-0"
+            strokeWidth={1.75}
+            style={{ color: 'var(--endo-red)' }}
+          />
+          <p>
+            This guide is crowdsourced from people&rsquo;s lived experience — it is not medical,
+            legal or professional advice, and it isn&rsquo;t a substitute for it. Always check
+            with a qualified doctor, therapist or employment adviser before making decisions about
+            treatment, finances or work.
+          </p>
+        </div>
+
         <div className="mb-8 flex items-baseline justify-between border-b border-border pb-4">
           <h2 className="font-display text-2xl uppercase leading-none tracking-wide text-foreground">
             Pick a section
